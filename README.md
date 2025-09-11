@@ -11,6 +11,10 @@ A React Native app built with Expo that provides a comprehensive dashboard for W
 - **Explorer Integration**: Direct links to blockchain explorers for transactions
 - **Responsive Design**: Optimized for both mobile and web platforms
 
+## Demo
+
+📱 [View demo](https://drive.google.com/file/d/1kVHVgi4vds8vLvJephLxeo89qcERbHpC/view)
+
 ## Installation and Setup
 
 ### Prerequisites
