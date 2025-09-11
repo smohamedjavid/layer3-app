@@ -17,7 +17,7 @@ A React Native app built with Expo that provides a comprehensive dashboard for W
 
 ## Screenshots
 
-| Leaderboard | User Details | Tokens | NFT | Transactions |
+|  |  |  |  |  |
 |-------------|----------------|-----------------|-----------------|-----------------|
 | ![Leaderboard](https://github.com/user-attachments/assets/3144f338-0cae-4881-8621-cc86ffe57f92) | ![Detail](https://github.com/user-attachments/assets/3b7d1189-b462-4c38-abbc-1f90e8f0a7ac) | ![Token](https://github.com/user-attachments/assets/5e086cb9-996f-46b9-b492-ee34984cea68) | ![NFT](https://github.com/user-attachments/assets/32f41530-fc4f-4afa-9abb-30f8f221bb36) | ![Transaction](https://github.com/user-attachments/assets/93593c44-8d65-46de-90d9-49daf3a0bea5) |
 
