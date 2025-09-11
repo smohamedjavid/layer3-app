@@ -51,35 +51,35 @@ export function EmptyState({ message }: EmptyStateProps) {
 }
 
 const styles = StyleSheet.create({
-  unhappyFlowContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: UI_CONSTANTS.PADDING,
+  emptyText: {
+    color: COLORS.textSecondary,
+    fontSize: 16,
+    textAlign: 'center',
   },
   errorText: {
-    fontSize: 16,
     color: COLORS.error,
-    textAlign: 'center',
+    fontSize: 16,
     marginBottom: UI_CONSTANTS.MARGIN,
+    textAlign: 'center',
+  },
+  loadingText: {
+    color: COLORS.textSecondary,
+    marginTop: UI_CONSTANTS.MARGIN,
   },
   retryButton: {
-    paddingHorizontal: UI_CONSTANTS.PADDING,
-    paddingVertical: UI_CONSTANTS.MARGIN,
     backgroundColor: COLORS.primary,
     borderRadius: UI_CONSTANTS.BORDER_RADIUS,
+    paddingHorizontal: UI_CONSTANTS.PADDING,
+    paddingVertical: UI_CONSTANTS.MARGIN,
   },
   retryText: {
     color: COLORS.surface,
     fontWeight: '600',
   },
-  loadingText: {
-    marginTop: UI_CONSTANTS.MARGIN,
-    color: COLORS.textSecondary,
-  },
-  emptyText: {
-    fontSize: 16,
-    color: COLORS.textSecondary,
-    textAlign: 'center',
+  unhappyFlowContainer: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
+    padding: UI_CONSTANTS.PADDING,
   },
 });

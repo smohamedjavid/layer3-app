@@ -43,39 +43,39 @@ export function UserHeader({ user }: UserHeaderProps) {
 }
 
 const styles = StyleSheet.create({
+  address: {
+    backgroundColor: 'rgba(200, 200, 200, 0.47)',
+    marginTop: 4,
+  },
+  avatar: {
+    borderRadius: 40,
+    height: 80,
+    marginBottom: 10,
+    width: 80,
+  },
+  details: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginHorizontal: 20,
+    marginTop: 24,
+  },
   header: {
     alignItems: 'center',
     paddingTop: 20,
   },
-  avatar: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    marginBottom: 10,
-  },
-  details: {
-    flexDirection: 'row',
-    marginHorizontal: 20,
-    justifyContent: 'space-around',
-    marginTop: 24,
-  },
-  pill: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingHorizontal: 8,
-    borderRadius: 12,
-  },
-  address: {
-    marginTop: 4,
-    backgroundColor: 'rgba(200, 200, 200, 0.47)',
-  },
-  xp: {
-    backgroundColor: 'rgba(173, 120, 102, 0.47)',
-  },
   level: {
     backgroundColor: 'rgba(111, 173, 102, 0.47)',
   },
+  pill: {
+    borderRadius: 12,
+    paddingBottom: 4,
+    paddingHorizontal: 8,
+    paddingTop: 4,
+  },
   streak: {
     backgroundColor: 'rgba(102, 116, 173, 0.47)',
+  },
+  xp: {
+    backgroundColor: 'rgba(173, 120, 102, 0.47)',
   },
 });

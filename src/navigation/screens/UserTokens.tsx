@@ -68,31 +68,31 @@ export function UserTokens() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
   container: {
+    backgroundColor: COLORS.backgroundSecondary,
     flex: 1,
-    backgroundColor: COLORS.backgroundSecondary,
-  },
-  tokensContainer: {
-    padding: 16,
-    backgroundColor: COLORS.backgroundSecondary,
   },
   emptyContainer: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     padding: 40,
   },
   emptyText: {
-    fontSize: 16,
     color: '#666',
+    fontSize: 16,
     textAlign: 'center',
   },
   errorText: {
-    fontSize: 16,
     color: 'red',
+    fontSize: 16,
     textAlign: 'center',
+  },
+  safeArea: {
+    flex: 1,
+  },
+  tokensContainer: {
+    backgroundColor: COLORS.backgroundSecondary,
+    padding: 16,
   },
 });

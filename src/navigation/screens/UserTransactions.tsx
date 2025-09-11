@@ -167,22 +167,22 @@ export function UserTransactions() {
 }
 
 const styles = StyleSheet.create({
+  emptyContainer: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
+    padding: 40,
+  },
+  emptyText: {
+    color: '#666',
+    fontSize: 16,
+    textAlign: 'center',
+  },
   safeArea: {
     flex: 1,
   },
   transactionsContainer: {
-    padding: 16,
     backgroundColor: COLORS.backgroundSecondary,
-  },
-  emptyContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 40,
-  },
-  emptyText: {
-    fontSize: 16,
-    color: '#666',
-    textAlign: 'center',
+    padding: 16,
   },
 });

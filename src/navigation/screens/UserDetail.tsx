@@ -147,12 +147,12 @@ export function UserDetail() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
+  container: {
+    backgroundColor: COLORS.backgroundSecondary,
     flex: 1,
   },
-  container: {
+  safeArea: {
     flex: 1,
-    backgroundColor: COLORS.backgroundSecondary,
   },
   sectionsContainer: {
     paddingBottom: 20,

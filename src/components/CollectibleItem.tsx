@@ -54,58 +54,58 @@ export function CollectibleItem({ item, variant = 'compact' }: CollectibleItemPr
 const styles = StyleSheet.create({
   // Compact variant (for UserDetail sections)
   compactItem: {
-    flexDirection: 'row',
     alignItems: 'center',
-    padding: 8,
-    marginBottom: 4,
+    backgroundColor: '#fff',
+    borderColor: '#e0e0e0',
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
-    backgroundColor: '#fff',
+    flexDirection: 'row',
+    marginBottom: 4,
+    padding: 8,
   },
   compactImage: {
-    width: 60,
-    height: 60,
     borderRadius: 6,
+    height: 60,
     marginRight: 12,
+    width: 60,
   },
   compactChain: {
-    fontSize: 12,
     color: '#666',
+    fontSize: 12,
     marginTop: 4,
   },
 
   // Detailed variant (for UserNFTs grid)
   detailedItem: {
+    backgroundColor: '#fff',
+    borderColor: '#e0e0e0',
+    borderRadius: 12,
+    borderWidth: 1,
     flex: 1,
     margin: 8,
-    borderRadius: 12,
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
     overflow: 'hidden',
   },
   detailedImage: {
-    width: '100%',
     height: 150,
+    width: '100%',
   },
   detailedInfo: {
     padding: 12,
   },
   detailedName: {
+    color: '#333',
     fontSize: 14,
     fontWeight: '600',
-    color: '#333',
     marginBottom: 4,
   },
   detailedId: {
-    fontSize: 12,
     color: '#666',
+    fontSize: 12,
   },
   detailedChain: {
-    fontSize: 11,
     color: '#888',
+    fontSize: 11,
     marginTop: 4,
   },
-  chainLogo: { width: 10, height: 10, borderRadius: 5 },
+  chainLogo: { borderRadius: 5, height: 10, width: 10 },
 });

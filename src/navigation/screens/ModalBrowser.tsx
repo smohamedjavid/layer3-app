@@ -1,5 +1,5 @@
 // React Native imports
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 
@@ -24,8 +24,8 @@ export function ModalBrowser() {
 
 const styles = StyleSheet.create({
   modalContainer: {
-    flex: 1,
     backgroundColor: '#fff',
+    flex: 1,
   },
   webView: {
     flex: 1,

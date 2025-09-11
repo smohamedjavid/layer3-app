@@ -72,48 +72,44 @@ export function MultichainBalanceCard({ balance, loading }: MultichainBalanceCar
 
 const styles = StyleSheet.create({
   balanceCard: {
+    backgroundColor: '#fcfcfcff',
+    borderColor: '#e0e0e0',
+    borderRadius: 12,
+    borderWidth: 1,
+    elevation: 3,
     margin: 16,
     padding: 16,
-    borderRadius: 12,
-    backgroundColor: '#fcfcfcff',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 3,
-  },
-  balanceHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 12,
-  },
-  balanceTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  chainLogos: {
-    flexDirection: 'row',
-  },
-  chainLogo: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#fff',
   },
   balanceContent: {
     alignItems: 'center',
   },
-  totalValue: {
-    fontSize: 24,
-    lineHeight: 28,
-    fontWeight: 'bold',
+  balanceHeader: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  balanceTitle: {
     color: '#333',
-    marginBottom: 4,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  chainLogo: {
+    borderColor: '#fff',
+    borderRadius: 12,
+    borderWidth: 2,
+    height: 24,
+    width: 24,
+  },
+  chainLogoOverlap: {
+    marginLeft: -8,
+  },
+  chainLogos: {
+    flexDirection: 'row',
   },
   changePercent: {
     fontSize: 14,
@@ -122,13 +118,17 @@ const styles = StyleSheet.create({
   loadingChangePercent: {
     color: '#666',
   },
-  positiveChange: {
-    color: '#51cf66',
-  },
   negativeChange: {
     color: '#ff6b6b',
   },
-  chainLogoOverlap: {
-    marginLeft: -8,
+  positiveChange: {
+    color: '#51cf66',
+  },
+  totalValue: {
+    color: '#333',
+    fontSize: 24,
+    fontWeight: 'bold',
+    lineHeight: 28,
+    marginBottom: 4,
   },
 });

@@ -69,26 +69,26 @@ export function UserNFTs() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
   container: {
+    backgroundColor: COLORS.backgroundSecondary,
     flex: 1,
-    backgroundColor: COLORS.backgroundSecondary,
-  },
-  nftsContainer: {
-    padding: 16,
-    backgroundColor: COLORS.backgroundSecondary,
   },
   emptyContainer: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     padding: 40,
   },
   emptyText: {
-    fontSize: 16,
     color: '#666',
+    fontSize: 16,
     textAlign: 'center',
+  },
+  nftsContainer: {
+    backgroundColor: COLORS.backgroundSecondary,
+    padding: 16,
+  },
+  safeArea: {
+    flex: 1,
   },
 });

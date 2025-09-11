@@ -53,29 +53,11 @@ export function SectionCard({
 }
 
 const styles = StyleSheet.create({
-  sectionCard: {
-    margin: 16,
-    padding: 16,
-    borderRadius: 12,
-    backgroundColor: '#f9f9f9',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-  },
-  sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 12,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  viewMoreText: {
+  emptyText: {
+    color: '#666',
     fontSize: 14,
-    color: '#007bff',
-    fontWeight: '600',
+    padding: 20,
+    textAlign: 'center',
   },
   itemsContainer: {
     gap: 8,
@@ -85,14 +67,32 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   loadingText: {
+    color: '#666',
+    fontSize: 14,
     marginTop: 8,
-    fontSize: 14,
-    color: '#666',
   },
-  emptyText: {
-    textAlign: 'center',
-    padding: 20,
+  sectionCard: {
+    backgroundColor: '#f9f9f9',
+    borderColor: '#e0e0e0',
+    borderRadius: 12,
+    borderWidth: 1,
+    margin: 16,
+    padding: 16,
+  },
+  sectionHeader: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  sectionTitle: {
+    color: '#333',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  viewMoreText: {
+    color: '#007bff',
     fontSize: 14,
-    color: '#666',
+    fontWeight: '600',
   },
 });

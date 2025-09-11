@@ -70,100 +70,100 @@ export function TransactionItem({ item, onPressExplorer }: TransactionItemProps)
 }
 
 const styles = StyleSheet.create({
-  transactionItem: {
-    padding: UI_CONSTANTS.PADDING,
-    marginBottom: UI_CONSTANTS.MARGIN,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: UI_CONSTANTS.BORDER_RADIUS,
-    backgroundColor: COLORS.surface,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: UI_CONSTANTS.SHADOW_OPACITY,
-    shadowRadius: 2,
-    elevation: 2,
-  },
-  transactionRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  transactionTypeContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flexShrink: 1,
-  },
-  transactionTypeIndicator: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginRight: 8,
-  },
-  transactionType: {
-    fontSize: 14,
-    fontWeight: '600',
-    flexShrink: 1,
-  },
-  sentIndicator: {
-    backgroundColor: COLORS.error,
-  },
-  receivedIndicator: {
-    backgroundColor: COLORS.success,
-  },
-  sentText: {
-    color: COLORS.error,
-  },
-  receivedText: {
-    color: COLORS.success,
-  },
-  chainText: {
-    fontSize: 14,
-    color: COLORS.textSecondary,
-    marginLeft: 4,
-  },
-  chainLogo: {
-    width: 16,
-    height: 16,
-    marginLeft: 4,
-    borderRadius: 8,
-  },
-  transactionTimestamp: {
-    fontSize: 12,
-    color: COLORS.textSecondary,
-    flexShrink: 0,
-  },
-  amountContainer: {
-    minWidth: 80,
-    marginRight: UI_CONSTANTS.MARGIN,
-  },
-  transactionValue: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: COLORS.text,
-  },
   addressFlow: {
-    flexDirection: 'row',
     alignItems: 'center',
+    flexDirection: 'row',
     flex: 1,
     justifyContent: 'flex-end',
     maxWidth: '60%',
   },
   addressText: {
-    fontSize: 11,
-    fontFamily: 'monospace',
-    color: COLORS.text,
     backgroundColor: '#f0f0f0',
+    borderRadius: UI_CONSTANTS.BORDER_RADIUS,
+    color: COLORS.text,
+    fontFamily: 'monospace',
+    fontSize: 11,
+    minWidth: 50,
     paddingHorizontal: UI_CONSTANTS.MARGIN,
     paddingVertical: 2,
-    borderRadius: UI_CONSTANTS.BORDER_RADIUS,
-    minWidth: 50,
     textAlign: 'center',
   },
+  amountContainer: {
+    marginRight: UI_CONSTANTS.MARGIN,
+    minWidth: 80,
+  },
   arrow: {
-    fontSize: 12,
     color: COLORS.textSecondary,
+    fontSize: 12,
     fontWeight: 'bold',
     marginHorizontal: 4,
+  },
+  chainLogo: {
+    borderRadius: 8,
+    height: 16,
+    marginLeft: 4,
+    width: 16,
+  },
+  chainText: {
+    color: COLORS.textSecondary,
+    fontSize: 14,
+    marginLeft: 4,
+  },
+  receivedIndicator: {
+    backgroundColor: COLORS.success,
+  },
+  receivedText: {
+    color: COLORS.success,
+  },
+  sentIndicator: {
+    backgroundColor: COLORS.error,
+  },
+  sentText: {
+    color: COLORS.error,
+  },
+  transactionItem: {
+    backgroundColor: COLORS.surface,
+    borderColor: COLORS.border,
+    borderRadius: UI_CONSTANTS.BORDER_RADIUS,
+    borderWidth: 1,
+    elevation: 2,
+    marginBottom: UI_CONSTANTS.MARGIN,
+    padding: UI_CONSTANTS.PADDING,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: UI_CONSTANTS.SHADOW_OPACITY,
+    shadowRadius: 2,
+  },
+  transactionRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  transactionTimestamp: {
+    color: COLORS.textSecondary,
+    flexShrink: 0,
+    fontSize: 12,
+  },
+  transactionType: {
+    flexShrink: 1,
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  transactionTypeContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexShrink: 1,
+  },
+  transactionTypeIndicator: {
+    borderRadius: 4,
+    height: 8,
+    marginRight: 8,
+    width: 8,
+  },
+  transactionValue: {
+    color: COLORS.text,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });

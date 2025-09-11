@@ -19,13 +19,13 @@ export function NotFound() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flex: 1,
+    gap: 10,
+    justifyContent: 'center',
+  },
   safeArea: {
     flex: 1,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 10,
   },
 });

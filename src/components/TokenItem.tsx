@@ -56,73 +56,73 @@ export function TokenItem({ item, showChange = false }: TokenItemProps) {
 }
 
 const styles = StyleSheet.create({
-  tokenItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 16,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    borderRadius: 12,
-    backgroundColor: COLORS.surface,
-    marginBottom: 8,
-  },
-  tokenLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-  },
-  tokenLogo: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    marginRight: 12,
-  },
-  tokenInfo: {
-    flex: 1,
-  },
-  tokenName: {
-    fontSize: 16,
-    fontWeight: '600',
+  tokenBalance: {
     color: COLORS.text,
-  },
-  tokenSymbol: {
     fontSize: 14,
-    color: COLORS.textSecondary,
+    fontWeight: '600',
+  },
+  tokenChain: {
+    color: COLORS.textMuted,
+    fontSize: 12,
     marginTop: 2,
   },
   tokenChainContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
-  },
-  tokenChain: {
-    fontSize: 12,
-    color: COLORS.textMuted,
-    marginTop: 2,
+    flexDirection: 'row',
   },
   tokenChainLogo: {
-    width: 10,
-    height: 10,
     borderRadius: 5,
+    height: 10,
     marginRight: 4,
-  },
-  tokenRight: {
-    alignItems: 'flex-end',
-  },
-  tokenBalance: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: COLORS.text,
-  },
-  tokenValue: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: COLORS.text,
-    marginTop: 4,
+    width: 10,
   },
   tokenChange: {
     fontSize: 12,
     fontWeight: '600',
     marginTop: 2,
+  },
+  tokenInfo: {
+    flex: 1,
+  },
+  tokenItem: {
+    alignItems: 'center',
+    backgroundColor: COLORS.surface,
+    borderColor: COLORS.border,
+    borderRadius: 12,
+    borderWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+    padding: 16,
+  },
+  tokenLeft: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    flex: 1,
+  },
+  tokenLogo: {
+    borderRadius: 20,
+    height: 40,
+    marginRight: 12,
+    width: 40,
+  },
+  tokenName: {
+    color: COLORS.text,
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  tokenRight: {
+    alignItems: 'flex-end',
+  },
+  tokenSymbol: {
+    color: COLORS.textSecondary,
+    fontSize: 14,
+    marginTop: 2,
+  },
+  tokenValue: {
+    color: COLORS.text,
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 4,
   },
 });

@@ -108,7 +108,7 @@ export interface CovalentRecentTransactionItem {
           indexed: boolean;
           decoded: boolean;
           value: string;
-        }
+        },
       ];
     };
   }[];

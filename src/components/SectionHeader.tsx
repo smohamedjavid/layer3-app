@@ -22,12 +22,12 @@ export function SectionHeader({ title }: SectionHeaderProps) {
 const styles = StyleSheet.create({
   sectionHeader: {
     backgroundColor: COLORS.backgroundSecondary,
-    paddingVertical: 8,
     paddingHorizontal: 16,
+    paddingVertical: 8,
   },
   sectionHeaderText: {
+    color: '#333',
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#333',
   },
 });

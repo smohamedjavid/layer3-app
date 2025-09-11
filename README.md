@@ -115,6 +115,36 @@ This app requires API keys from the following services:
    pnpm android  # Android emulator
    ```
 
+## Code Quality
+
+### Linting
+
+The project uses ESLint for code linting with TypeScript and React Native specific rules.
+
+```sh
+# Run linting
+pnpm lint
+
+# Run linting with auto-fix
+pnpm lint:fix
+```
+
+### Git Hooks
+
+The project uses Husky and lint-staged to run linting automatically on pre-commit:
+
+- **Pre-commit hook**: Runs ESLint on staged files and automatically fixes issues
+- **Configuration**: Located in `.husky/pre-commit` and `package.json` (lint-staged)
+
+### Code Style Rules
+
+- TypeScript strict mode enabled
+- React Hooks rules enforced
+- React Native specific linting rules
+- Automatic style sorting for consistency
+- Console statements allowed in development
+- Test files have relaxed rules for development convenience
+
 ## Testing
 
 ### Running Tests
@@ -295,5 +325,3 @@ src/
 ## License
 
 This project is licensed under the MIT License.
-
----

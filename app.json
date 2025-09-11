@@ -3,7 +3,7 @@
     "name": "layer3-app",
     "slug": "layer3-app",
     "version": "1.0.0",
-    "orientation": "default",
+    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -29,10 +29,14 @@
         {
           "backgroundColor": "#ffffff",
           "image": "./assets/splash-icon.png",
-          "resizeMode": "cover"
+          "imageWidth": 200,
+          "resizeMode": "contain"
         }
-      ],
-      "react-native-edge-to-edge"
-    ]
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
   }
 }

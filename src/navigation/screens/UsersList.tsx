@@ -81,52 +81,52 @@ export function UsersList() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
-  userItem: {
-    flexDirection: 'row',
-    padding: 16,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#c8c8c855',
-    borderRadius: 16,
-    alignItems: 'center',
-    backgroundColor: 'rgba(251, 251, 251, 0.99)',
-  },
   avatar: {
-    width: 50,
-    height: 50,
     borderRadius: 25,
+    height: 50,
     marginLeft: 10,
     marginRight: 16,
+    width: 50,
   },
-  rankText: {
-    minWidth: 40,
+  levelPill: {
+    backgroundColor: 'rgba(111, 173, 102, 0.47)',
+    marginLeft: 8,
+  },
+  listContent: {
+    backgroundColor: COLORS.backgroundSecondary,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+  },
+  pill: {
+    borderRadius: 12,
+    paddingBottom: 4,
+    paddingHorizontal: 8,
+    paddingTop: 4,
   },
   pillContainer: {
     flexDirection: 'row',
     marginTop: 8,
   },
-  pill: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingHorizontal: 8,
-    borderRadius: 12,
+  rankText: {
+    minWidth: 40,
   },
-  xpPill: {
-    backgroundColor: 'rgba(173, 120, 102, 0.47)',
-  },
-  levelPill: {
-    marginLeft: 8,
-    backgroundColor: 'rgba(111, 173, 102, 0.47)',
+  safeArea: {
+    flex: 1,
   },
   userInfo: {
     flex: 1,
   },
-  listContent: {
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    backgroundColor: COLORS.backgroundSecondary,
+  userItem: {
+    alignItems: 'center',
+    backgroundColor: 'rgba(251, 251, 251, 0.99)',
+    borderColor: '#c8c8c855',
+    borderRadius: 16,
+    borderWidth: 1,
+    flexDirection: 'row',
+    marginBottom: 10,
+    padding: 16,
+  },
+  xpPill: {
+    backgroundColor: 'rgba(173, 120, 102, 0.47)',
   },
 });

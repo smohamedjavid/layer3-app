@@ -71,13 +71,6 @@ jest.mock('@react-navigation/native-stack', () => ({
   }),
 }));
 
-jest.mock('@react-navigation/bottom-tabs', () => ({
-  createBottomTabNavigator: () => ({
-    Navigator: 'Navigator',
-    Screen: 'Screen',
-  }),
-}));
-
 jest.mock('@react-navigation/elements', () => ({
   useHeaderHeight: () => 50,
 }));

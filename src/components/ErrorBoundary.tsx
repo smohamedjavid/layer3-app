@@ -53,21 +53,21 @@ export class ErrorBoundary extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
+    backgroundColor: COLORS.background,
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     padding: UI_CONSTANTS.PADDING,
-    backgroundColor: COLORS.background,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: COLORS.error,
-    marginBottom: UI_CONSTANTS.MARGIN,
   },
   message: {
-    fontSize: 14,
     color: COLORS.textSecondary,
+    fontSize: 14,
     textAlign: 'center',
+  },
+  title: {
+    color: COLORS.error,
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: UI_CONSTANTS.MARGIN,
   },
 });

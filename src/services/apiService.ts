@@ -207,14 +207,17 @@ export const apiService = {
     let totalValue24h = 0;
 
     // Group tokens by chain
-    const chainGroups = tokens.reduce((groups, token) => {
-      const chainName = token.chain_name;
-      if (!groups[chainName]) {
-        groups[chainName] = [];
-      }
-      groups[chainName].push(token);
-      return groups;
-    }, {} as Record<string, Token[]>);
+    const chainGroups = tokens.reduce(
+      (groups, token) => {
+        const chainName = token.chain_name;
+        if (!groups[chainName]) {
+          groups[chainName] = [];
+        }
+        groups[chainName].push(token);
+        return groups;
+      },
+      {} as Record<string, Token[]>
+    );
 
     // Calculate balance for each chain
     Object.entries(chainGroups).forEach(([chainName, chainTokens]) => {
