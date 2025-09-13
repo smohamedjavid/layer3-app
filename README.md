@@ -199,10 +199,11 @@ tests/
 
 ### Feature Enhancements
 
-1. **Advanced Filtering & Search**
+1. **Advanced Filtering & Search and Pagination**
    - Add search functionality across tokens, NFTs, and transactions
    - Implement advanced filtering by chain, value, date ranges
    - Add sorting options for different data types
+   - Add paginated response for tokens, NFTs and TX history and load the data on scroll
 
 2. **Portfolio Analytics**
    - Add portfolio performance charts and analytics
@@ -234,31 +235,209 @@ tests/
 
 ## Production Deployment
 
-### Deployment Steps
+### EAS Build Setup
 
-#### Mobile App Stores
-
-1. **iOS App Store**
+1. **Install EAS CLI**:
 
    ```sh
-   # Build production iOS app
-   pnpm ios --production
-
-   # Archive and upload to App Store Connect
-   # Use Xcode or eas build for automated deployment
+   npm install -g @expo/eas-cli
    ```
 
-2. **Google Play Store**
+2. **Login to EAS**:
 
    ```sh
-   # Build production Android app
-   pnpm android --production
-
-   # Generate signed APK/AAB
-   # Upload to Google Play Console
+   eas login
    ```
 
-### Production Monitoring
+3. **Configure EAS Build**:
+
+   ```sh
+   eas build:configure
+   ```
+
+### Building for Production
+
+#### iOS App Store
+
+1. **Build iOS Production App**:
+
+   ```sh
+   # Build for iOS
+   eas build --platform ios --profile production
+
+   # Or build and submit in one command
+   eas build --platform ios --profile production --auto-submit
+   ```
+
+2. **Manual Submission to App Store Connect**:
+
+   ```sh
+   # If not using auto-submit
+   eas submit --platform ios --profile production
+   ```
+
+3. **App Store Connect Steps**:
+   - Go to [App Store Connect](https://appstoreconnect.apple.com/)
+   - Select your app
+   - Go to "TestFlight" tab
+   - Upload the build from EAS
+   - Fill out app information, screenshots, and metadata
+   - Submit for review
+
+#### Android Google Play Store
+
+1. **Build Android Production App**:
+
+   ```sh
+   # Build for Android
+   eas build --platform android --profile production
+
+   # Or build and submit in one command
+   eas build --platform android --profile production --auto-submit
+   ```
+
+2. **Manual Submission to Google Play Console**:
+
+   ```sh
+   # If not using auto-submit
+   eas submit --platform android --profile production
+   ```
+
+3. **Google Play Console Steps**:
+   - Go to [Google Play Console](https://play.google.com/console/)
+   - Select your app
+   - Go to "Production" track
+   - Upload the AAB file from EAS
+   - Fill out store listing, screenshots, and metadata
+   - Submit for review
+
+### Environment Configuration
+
+### Code Signing Setup
+
+#### iOS Code Signing
+
+1. **Create Apple Developer Account** and configure certificates
+2. **EAS will handle provisioning profiles automatically**
+3. **Or configure manually**:
+
+   ```json
+   {
+     "ios": {
+       "bundleIdentifier": "com.yourcompany.layer3app",
+       "buildType": "app-store"
+     }
+   }
+   ```
+
+#### Android Code Signing
+
+1. **Create upload key**:
+
+   ```sh
+   keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+   ```
+
+2. **Configure in EAS**:
+
+   ```sh
+   eas build:configure
+   # Follow prompts to upload your keystore
+   ```
+
+### Testing Production Builds
+
+#### Internal Testing
+
+1. **iOS TestFlight**:
+
+   ```sh
+   # Build for TestFlight
+   eas build --platform ios --profile production
+   # Upload to TestFlight through App Store Connect
+   ```
+
+2. **Android Internal Testing**:
+
+   ```sh
+   # Build for internal testing
+   eas build --platform android --profile production
+   # Upload to Google Play Console Internal Testing track
+   ```
+
+#### Build Verification
+
+```sh
+# Test production build locally
+npx expo run:ios --configuration Release
+npx expo run:android --configuration Release
+```
+
+### Monitoring and Maintenance
+
+#### Post-Deployment Monitoring
+
+1. **Error Tracking**: Implement Sentry or similar
+2. **Analytics**: Set up app analytics (Firebase, Mixpanel, etc.)
+3. **Crash Reporting**: Monitor crash reports and fix issues
+4. **Performance**: Track app performance metrics
+
+#### Update Process
+
+1. **Version Management**:
+
+   ```json
+   // app.json
+   {
+     "version": "1.1.0",
+     "ios": {
+       "buildNumber": "1.1.0"
+     },
+     "android": {
+       "versionCode": 2
+     }
+   }
+   ```
+
+2. **Build and Submit Updates**:
+
+   ```sh
+   # Build new version
+   eas build --platform all --profile production
+
+   # Submit to stores
+   eas submit --platform ios --profile production
+   eas submit --platform android --profile production
+   ```
+
+### Troubleshooting
+
+#### Common Issues
+
+1. **Build Failures**:
+   - Check EAS build logs: `eas build:list`
+   - Verify environment variables are set correctly
+   - Ensure all dependencies are compatible with production builds
+
+2. **Submission Issues**:
+   - Verify app metadata is complete
+   - Check screenshots meet store requirements
+   - Ensure privacy policy and terms are linked
+
+3. **Code Signing Problems**:
+   - Regenerate certificates if expired
+   - Verify bundle IDs match between code and store
+   - Check that upload keys are properly configured
+
+#### Getting Help
+
+- [EAS Build Documentation](https://docs.expo.dev/build/introduction/)
+- [EAS Submit Documentation](https://docs.expo.dev/submit/introduction/)
+- [Expo Forums](https://forums.expo.dev/)
+- [App Store Connect Help](https://developer.apple.com/support/app-store-connect/)
+- [Google Play Console Help](https://support.google.com/googleplay/android-developer)
+
+### Future Improvements
 
 1. **Error Tracking**
    - Implement Sentry or similar error monitoring
@@ -280,7 +459,7 @@ tests/
 1. **API Management**
    - Implement API rate limiting and caching
    - Set up API monitoring and alerting
-   - Consider API gateway/proxy for better control over API keys
+   - Consider API gateway/proxy for better control over API keys (and RPC request)
 
 2. **Database & Storage**
    - Implement proper data caching strategies
@@ -294,14 +473,6 @@ tests/
 - Base
 - Arbitrum
 - BNB Smart Chain (NFTs coming soon)
-
-## Architecture
-
-- **React Native + Expo**: Cross-platform mobile development
-- **React Navigation**: Navigation and routing
-- **TypeScript**: Type-safe development
-- **FlashList**: High-performance list rendering
-- **Context API**: State management for user data
 
 ## Project Structure
 
